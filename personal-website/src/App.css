@@ -141,8 +141,8 @@ border-color: limegreen;
   }
 
   @supports (-webkit-touch-callout: none) {
-    body {
-      font-weight: 500;
+    .footer-text {
+      font-weight: 600;
     }
   }
 }
