@@ -1,40 +1,50 @@
+
+
 h2{
   margin:0;
 }
 
-
-body{
-  background-color:black;
+root{
+  width: 100%
 }
 
-#content-box{
-  margin: 0;
-  position:absolute;
+#background{
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 90%, rgba(50,205,50,1) 100%);
+}
+
+#content-grid{
+  border: 4px solid limegreen;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90vw;
+  height: auto;
+  margin: 0 auto 0 auto;
+  background-color: black;
+  align-items: center;
+  padding-right: 10px;
+  position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  border: 4px solid limegreen;
-  width: 1920px;
-  height: 1000px;
-  margin: 0 auto 0 auto;
 }
-
-#canvas{
-  padding-top: 125px;
-  display:inline-block;
-}
-
-canvas{
+#threejsCanvas{
   display: inline-block;
+  position: relative;
+  aspect-ratio:1;
+  width: 100%;
 }
+#canvas-box{
+  display: inline-block;
+  position: relative;
+  width:100%;
 
+}
 .App-header{
   color:limegreen;
   font-family: 'Press Start 2P', cursive;
   font-size: large;
 }
-
 .bio{
   color:limegreen;
   margin: 15px 0 15px 0;
@@ -43,63 +53,90 @@ canvas{
   font-family: 'Press Start 2P', cursive;
   font-size: large;
   line-height: 20px;
+  word-wrap: break-word;
 }
-
 .bio-header{
   color:limegreen;
   font-family: 'Press Start 2P', cursive;
   font-size: 32px;
   text-align: center;
-  
 }
-
 .text-container{
+  grid-column-start: 2;
+  grid-column-end: 4;
   display: inline-block;
-  position: absolute;
-  top: 62.5px;
-  padding-left: 25px;
-  width: 55%;
+  width: 100%;
+  padding-bottom: 10px;
+  vertical-align: top;
 }
-
 .text-grid{
   display:grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px
 }
-
 hr{
 border-color: limegreen;
 }
-
 .div-button{
   background-color: limegreen;
-  margin-top: 50px;
+  margin-top: 10px;
 }
-
 .div-button:hover{
-  background-color: black;
-  margin-top: 50px;
+  background: rgba(76, 175, 80, 0); /* Green background with 30% opacity */
   cursor: pointer;
 }
-
 .div-button:hover>.bio-button{
   color:limegreen;
 }
-
 .bio-button{
-  margin: 15px 0 15px 0;
+  margin: 10px 0 10px 0;
   color:black;
   font-family: 'Press Start 2P', cursive;
   font-size: large;
   text-align: center;
 }
-
 .footer-text{
   color:limegreen;
-  font-size: large;
+  font-size: 18px;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Molle', cursive;
+}
+#top-margin{
+  margin-top: 0px;
+}
+@media screen and (max-width: 1250px) {
+  .bio{
+    margin: 0;
+    font-size: 1.25vw;
+    line-height: 1.25vw;
+    word-wrap: break-word;
+  }
+  .text-grid{
+    gap: 5px;
+    height: 100%;
+  }
+  .bio-button{
+    margin: 3px 0 3px 0;
+    font-size: 2vw;
+  }
+
+  .text-container{
+    display: inline-block;
+    padding-left: 5px;
+    width: 100%;
+  }
+  .bio-header{
+    font-size: 2.5vw;
+  }
+  .footer-text{
+    font-size: 2.5vw;
+  }
+  .div-button:hover{
+    background: rgba(76, 175, 80, 0); /* Green background with 30% opacity */
+    margin-top: 10px;
+    cursor: pointer;
+  }
 }

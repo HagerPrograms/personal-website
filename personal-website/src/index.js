@@ -10,8 +10,9 @@ import Footer from './Footer'
 //Web page composition.
 ReactDOM.render(
   <React.StrictMode>
-    <div id="content-box">
-    <div id="canvas">
+    <div id="content-grid">
+    <div id="canvas-box">
+      <canvas id="canvas"></canvas>
       <ThreeJS />
     </div>
     <Biography />

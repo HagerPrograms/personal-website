@@ -6,7 +6,7 @@ class Footer extends React.Component{
         return(
             <>
             <div>
-                <p className="footer-text">Powered by Three.js and React</p>
+                <p className="footer-text">Powered by Three.js, React, and typed.js</p>
             </div>
             </>
         )
