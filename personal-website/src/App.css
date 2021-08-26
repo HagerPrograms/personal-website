@@ -139,4 +139,10 @@ border-color: limegreen;
     margin-top: 10px;
     cursor: pointer;
   }
+
+  @supports (-webkit-touch-callout: none) {
+    body {
+      font-weight: 500;
+    }
+  }
 }
