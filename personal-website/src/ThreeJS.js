@@ -13,6 +13,7 @@ import './App.css';
 import React from 'react';
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import {Platform} from 'react';
 
 class threeJSCanvas extends React.Component{
   //Once component mounts this code will be executed.
@@ -74,6 +75,9 @@ class threeJSCanvas extends React.Component{
       //Set Camera position
       
       var aspect = renderer.domElement.clientWidth / renderer.domElement.clientHeight;
+      if (Platform.OS === 'ios'){
+        aspect *= 2;
+      }
 
       camera.position.x = 2*(1/aspect);
       camera.position.y = 0.5*(1/aspect);
