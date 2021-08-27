@@ -142,7 +142,7 @@ border-color: limegreen;
 
   @supports (-webkit-touch-callout: none) {
     .footer-text {
-      font-weight: 600;
+      font-weight: 800;
     }
   }
 }

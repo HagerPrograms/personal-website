@@ -13,7 +13,7 @@ import './App.css';
 import React from 'react';
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import {Platform} from 'react';
+import {Platform} from 'react-native';
 
 class threeJSCanvas extends React.Component{
   //Once component mounts this code will be executed.
